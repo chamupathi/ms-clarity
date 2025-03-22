@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import BaseLayout from "./ui/layouts/BaseLayout";
+import ClarityInit from "./ui/analytics/clarity-init";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,9 +16,11 @@ export default function RootLayout({
 }: {
     children: React.ReactNode;
 }) {
+    
     return (
         <html lang="en">
             <body className={inter.className}>
+                <ClarityInit />
                 <BaseLayout>
                     {children}
                 </BaseLayout>
