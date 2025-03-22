@@ -30,7 +30,7 @@ export default function Header({ isMenuOpen, onMenuToggle }: HeaderProps) {
         >
             <nav className="hidden md:flex items-center gap-4">
                 {navigationLinks.map((link) => (
-                    <Link key={link.href} href={link.href}>
+                    <Link key={link.href} href={link.href} className="text-[var(--fme-primary)]">
                         {link.label}
                     </Link>
                 ))}

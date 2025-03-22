@@ -35,7 +35,7 @@ export default function SideNavigation({ isOpen, onClose }: SideNavigationProps)
                         <Link 
                             key={link.href}
                             href={link.href} 
-                            className="text-white hover:text-gray-200 transition-colors"
+                            className="text-[var(--fme-primary)] hover:text-gray-200 transition-colors"
                             onClick={onClose}
                         >
                             {link.label}

@@ -70,7 +70,7 @@ export default function SearchForm() {
 
       <button 
         type="submit"
-        className="w-full md:w-1/2 text-gray-800 px-4 py-2 rounded-lg border bg-[#ff9933] border-[#ff9933] focus:outline-none focus:[#ff9933]0 focus:border-[#ff9933] appearance-none cursor-pointer">
+        className="w-full md:w-1/2 text-gray-800 px-4 py-2 rounded-lg border bg-[var(--fme-primary)] border-[var(--fme-primary)] focus:outline-none focus:[var(--fme-primary)]0 focus:border-[var(--fme-primary)] appearance-none cursor-pointer">
         <span className="text-white">Search</span>
       </button>
     </form>
