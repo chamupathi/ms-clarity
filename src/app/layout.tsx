@@ -6,8 +6,8 @@ import BaseLayout from "./ui/layouts/BaseLayout";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-    title: "Your App Title",
-    description: "Your app description",
+    title: "MS clarity test",
+    description: "MS clarity test",
 };
 
 export default function RootLayout({

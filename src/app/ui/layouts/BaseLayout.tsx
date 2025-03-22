@@ -4,6 +4,7 @@ import Image from "next/image";
 import Header from "../header";
 import SideNavigation from "../SideNavigation";
 import { useEffect, useState } from "react";
+import Clarity from '@microsoft/clarity';
 
 interface BaseLayoutProps {
     children: React.ReactNode;
@@ -23,19 +24,23 @@ export default function BaseLayout({ children }: BaseLayoutProps) {
     
       /* eslint-disable */
       useEffect(() => {
+        // if (typeof window !== "undefined") {
+        //   (function (c: any, l: Document, a: string, r: string, i: string, t?: HTMLScriptElement, y?: Node) {
+        //     c[i] =
+        //       c[i] ||
+        //       function (...args: any) {
+        //         (c[i].q = c[i].q || []).push(args);
+        //       };
+        //     t = l.createElement(a) as HTMLScriptElement;
+        //     t.async = true;
+        //     t.src = r;
+        //     y = l.getElementsByTagName(a)[0];
+        //     y?.parentNode?.insertBefore(t, y);
+        //   })(window, document, "script", "https://www.clarity.ms/tag/qrxizr0930", "clarity");
+        // }
+
         if (typeof window !== "undefined") {
-          (function (c: any, l: Document, a: string, r: string, i: string, t?: HTMLScriptElement, y?: Node) {
-            c[i] =
-              c[i] ||
-              function (...args: any) {
-                (c[i].q = c[i].q || []).push(args);
-              };
-            t = l.createElement(a) as HTMLScriptElement;
-            t.async = true;
-            t.src = r;
-            y = l.getElementsByTagName(a)[0];
-            y?.parentNode?.insertBefore(t, y);
-          })(window, document, "script", "https://www.clarity.ms/tag/qrxizr0930", "clarity");
+            Clarity.init('qrxizr0930');
         }
       }, []);
       /* eslint-enable */
